@@ -1,0 +1,20 @@
+ 网址
+        http://www.jianshu.com/p/42e11515c10f
+
+打开
+    1.在终端进入到项目的目录,  输入  node_modules/.bin/webpack app/main.js public/bundle.js
+
+    2.打开index文件可预览效果
+
+    (创建了webpack.config文件后可以直接在终端执行webpack命令)
+
+    3.在package.json里面的scripts加入  "start" : "webpack"   相当于把npm的start命令指向webpack命令
+      然后就可以通过 npm start 执行相关命令了
+
+    4.devserver配置选项
+          功能描述:
+            contentBase	默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
+            port	设置默认监听端口，如果省略，默认为”8080“
+            inline	设置为true，当源文件改变时会自动刷新页面
+            colors	设置为true，使终端输出的文件为彩色的
+            historyApiFallback	在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
